@@ -1,7 +1,8 @@
 # VARS
 
 variable "bucket_name" {
-  default = "exame-4"
+  default = "exame-5"
+  
 }
 
 variable "website_endpoint" {
