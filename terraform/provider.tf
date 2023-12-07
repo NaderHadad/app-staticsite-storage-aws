@@ -10,12 +10,12 @@ terraform {
     }
   }
 
-  # backend "s3" {
-  #   bucket         = "bucketkledin-1"
-  #   key            = "terraform.tfstate"
-  #   dynamodb_table = "exame-db"
-  #   region         = "us-east-1"
-  # }
+  backend "s3" {
+    bucket         = "bucketkledin-1"
+    key            = "terraform.tfstate"
+    dynamodb_table = "exame-db"
+    region         = "us-east-1"
+  }
 
 }
 
