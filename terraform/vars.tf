@@ -1,7 +1,7 @@
 # VARS
 
 variable "bucket_name" {
-  default = "exame-8"
+  default = "exame-9"
   
 }
 
