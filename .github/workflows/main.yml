@@ -3,7 +3,7 @@ name: IaC Lifecycle
 on:
   push:
     branches:
-    - main
+    - storage-aws
     paths:
     - 'terraform/**'
 
