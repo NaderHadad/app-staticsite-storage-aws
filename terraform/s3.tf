@@ -10,7 +10,24 @@ resource "aws_s3_bucket_versioning" "bucket-versioning" {
     status = "Enabled"
   }
 }
+resource "aws_iam_role" "terraform_execution_role" {
+  name = "terraform_execution_role"
+  
+  assume_role_policy = jsonencode({
+    Version = "2012-10-17",
+    Statement = [
+      {
+        Action = "sts:AssumeRole",
+        Effect = "Allow",
+        Principal = {
+          Service = "ec2.amazonaws.com"  # Ou qualquer serviço que precise assumir a função
+        }
+      }
+    ]
+  })
 
+  # Outras configurações do role, se necessário
+}
 resource "aws_iam_policy" "s3_acl_policy" {
   name        = "s3_acl_policy"
   description = "Policy for modifying S3 ACLs"
