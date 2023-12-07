@@ -4,8 +4,8 @@ on:
   push:
     branches:
     - storage-aws
-    paths:
-    - 'terraform/**'
+    # paths:
+    # - 'terraform/**'
 
 jobs:
 
