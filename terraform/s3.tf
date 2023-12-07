@@ -2,7 +2,7 @@
 
 resource "aws_s3_bucket" "bucket" {
   bucket = var.bucket_name
-  acl    = "public-read"  # Configuração inicial para "public-read" (você pode ajustar conforme necessário)
+  acl    = "private"  # Configuração inicial para "private" (você pode ajustar conforme necessário)
 }
 
 resource "aws_s3_bucket_versioning" "bucket-versioning" {
